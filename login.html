@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Daily Dough Bakeshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
+                <h1>Daily Dough Bakeshop</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="active">Log in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <img class="login-logo" src="logo/logo.png" alt="Logo">
+                <h1>Daily Dough Bakeshop</h1>
+            </div>
+
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showTab('login')">Login</button>
+                <button class="tab-btn" onclick="showTab('register')">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <p class="auth-link">Don't have an account? <a href="#" onclick="showTab('register'); return false;">Register</a></p>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="auth-btn">Register</button>
+                <p class="auth-link">Already have an account? <a href="#" onclick="showTab('login'); return false;">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating About icon -->
+    <a href="#about" id="aboutBtn">
+        <img src="logo/rolling.png" alt="About Icon">
+    </a>
+
+    <!-- Popup box -->
+    <div id="about" class="popup">
+        <h2>About Daily Dough Bakeshop</h2>
+        <p>
+            We bake fresh bread, pastries, and cakes daily with love and care.
+            Our mission is to bring warmth and joy to every home through oven-fresh goodness.
+        </p>
+        <a href="#none" class="close">Close</a>
+    </div>
+
+    <script>
+        function showTab(tab) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            
+            if (tab === 'login') {
+                loginForm.style.display = 'flex';
+                registerForm.style.display = 'none';
+                tabBtns[0].classList.add('active');
+                tabBtns[1].classList.remove('active');
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'flex';
+                tabBtns[0].classList.remove('active');
+                tabBtns[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
