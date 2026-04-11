@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Daily Dough Bakeshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
+                <h1>Daily Dough Bakeshop</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" id="login">Log in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Our Menu</h1>
+            <p>Where every bites feels like home!</p>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="Menu/pandesal.jpg" alt="Pan de Sal">
+                    </div>
+                    <div class="card-info">
+                        <h3>Pan de Sal</h3>
+                        <span class="price">15.00</span>
+                        <span class="tag">Best Seller</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="Menu/images.jpg" alt="Ensaymada">
+                    </div>
+                    <div class="card-info">
+                        <h3>Ensaymada</h3>
+                        <span class="price">25.00</span>
+                        <span class="tag">Popular</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="Menu/images (1).jpg" alt="Spanish Bread">
+                    </div>
+                    <div class="card-info">
+                        <h3>Spanish Bread</h3>
+                        <span class="price">18.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg" alt="Cheese Bread">
+                    </div>
+                    <div class="card-info">
+                        <h3>Cheese Bread</h3>
+                        <span class="price">20.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="Menu/slices-of-pan-de-coco-filipino-bread-roll.jpg" alt="Pan de Coco">
+                    </div>
+                    <div class="card-info">
+                        <h3>Pan de Coco</h3>
+                        <span class="price">22.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="Menu/hq720.jpg" alt="Putok">
+                    </div>
+                    <div class="card-info">
+                        <h3>Putok</h3>
+                        <span class="price">12.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating About icon -->
+    <a href="#about" id="aboutBtn">
+        <img src="logo/rolling.png" alt="About Icon">
+    </a>
+
+    <!-- Product Popup Modal -->
+    <div id="productModal" class="product-modal">
+        <div class="product-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-modal-image">
+                <img id="modalProductImage" src="" alt="">
+            </div>
+            <div class="product-modal-info">
+                <h2 id="modalProductName"></h2>
+                <p class="modal-price" id="modalProductPrice"></p>
+                <p class="modal-description">Freshly baked with love!</p>
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <div class="quantity-controls">
+                        <button type="button" id="decreaseQty">-</button>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
+                        <button type="button" id="increaseQty">+</button>
+                    </div>
+                </div>
+                <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+

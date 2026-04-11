@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery - Daily Dough Bakeshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
+                <h1>Daily Dough Bakeshop</h1>
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="delivery.html" class="active">Delivery</a></li>
+                    <li><a href="login.html" id="login">Log in</a></li>
+                    <li><a href="cart.html" class="cart-icon" title="Shopping Cart"><img src="logo/cart-svgrepo-com.svg" alt="Cart"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Delivery Information</h1>
+            <p>Fresh bread delivered to your doorstep!</p>
+        </div>
+
+        <div class="delivery-section">
+            <!-- Delivery Areas -->
+            <div class="delivery-card">
+                <div class="delivery-icon">
+                    <span>📍</span>
+                </div>
+                <h2>Delivery Areas</h2>
+                <p>We currently deliver within:</p>
+                <ul class="area-list">
+                    <li>Manila</li>
+                    <li>Quezon City</li>
+                    <li>Makati</li>
+                    <li>Pasig</li>
+                    <li>Mandaluyong</li>
+                    <li>Caloocan</li>
+                    <li>San Juan</li>
+                    <li>Pasay</li>
+                </ul>
+            </div>
+
+            <!-- Delivery Hours -->
+            <div class="delivery-card">
+                <div class="delivery-icon">
+                    <span>🕐</span>
+                </div>
+                <h2>Delivery Hours</h2>
+                <div class="hours-info">
+                    <p><strong>Monday - Friday:</strong> 7:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong> 7:00 AM - 4:00 PM</p>
+                    <p><strong>Sunday:</strong> 8:00 AM - 2:00 PM</p>
+                </div>
+                <p class="note">Same-day delivery for orders placed before 2:00 PM</p>
+            </div>
+
+            <!-- Delivery Fee -->
+            <div class="delivery-card">
+                <div class="delivery-icon">
+                    <span>💰</span>
+                </div>
+                <h2>Delivery Fee</h2>
+                <div class="fee-info">
+                    <p><strong>Orders ₱500+</strong> - FREE Delivery</p>
+                    <p><strong>Orders below ₱500</strong> - ₱50.00 fee</p>
+                </div>
+            </div>
+
+            <!-- How to Order -->
+            <div class="delivery-card full-width">
+                <div class="delivery-icon">
+                    <span>📦</span>
+                </div>
+                <h2>How to Order for Delivery</h2>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Browse our <a href="menu.html">Menu</a> and add items to your cart</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Log in or register for an account</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Fill in your delivery address at checkout</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <p>Choose your preferred payment method</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <p>Sit back and wait for your fresh bread!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact for Delivery Inquiries -->
+            <div class="delivery-card contact-card">
+                <h2>Delivery Inquiries</h2>
+                <p>Have questions about delivery? We're here to help!</p>
+                <div class="contact-methods">
+                    <a href="tel:+639123456789" class="contact-btn">Call Us</a>
+                    <a href="contact.html" class="contact-btn">Send Message</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating About icon -->
+    <a href="#about" id="aboutBtn">
+        <img src="logo/rolling.png" alt="About Icon">
+    </a>
+
+    <!-- About Popup box -->
+    <div id="about" class="popup">
+        <h2>About Daily Dough Bakeshop</h2>
+        <p>
+            We bake fresh bread, pastries, and cakes daily with love and care.
+            Our mission is to bring warmth and joy to every home through oven-fresh goodness.
+        </p>
+        <a href="#none" class="close">Close</a>
+    </div>
+</body>
+
+</html>

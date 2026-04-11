@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Daily Dough Bakeshop</title>
+    <title>Cart - Daily Dough Bakeshop</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-container">
@@ -17,10 +19,12 @@
                 <ul>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="location.html">Location</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="delivery.html">Delivery</a></li>
-                        <li><a href="login.html" id="login">Log in</a></li>
-                    <li><a href="cart.html" class="cart-icon" title="Shopping Cart"><img src="logo/cart-svgrepo-com.svg" alt="Cart"></a></li>
+                    <li><a href="login.html" id="login">Log in</a></li>
+                    <li><a href="cart.html" class="cart-icon active">
+                        <img src="logo/cart-svgrepo-com.svg" alt="Cart">
+                    </a></li>
                 </ul>
             </div>
         </div>
@@ -28,28 +32,18 @@
 
     <div class="page-content">
         <div class="page-header">
-            <h1>Contact Us</h1>
-            <p>We would love to hear from you</p>
+            <h1>Shopping Cart</h1>
+            <p>Your selected items</p>
         </div>
 
-        <div class="contact-section">
-            <div class="contact-form">
-                <h2>Send us a Message</h2>
-                <form>
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your Message"></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <p><strong>Address:</strong><br>123 Bakery Street,<br>Philippines</p>
-                <p><strong>Phone:</strong><br>+63 123 456 7890</p>
-                <p><strong>Email:</strong><br>hello@dailydough.com</p>
-                <p><strong>Hours:</strong><br>Mon-Sun: 6:00 AM - 9:00 PM</p>
+        <div class="cart-section">
+            <div class="cart-empty">
+                <div class="empty-icon">
+                    <img src="logo/cart-svgrepo-com.svg" alt="Empty Cart">
+                </div>
+                <h2>Your cart is empty</h2>
+                <p>Looks like you haven't added any items yet.</p>
+                <a href="menu.html" class="back-to-menu-btn">Browse Menu</a>
             </div>
         </div>
     </div>
@@ -59,7 +53,7 @@
         <img src="logo/rolling.png" alt="About Icon">
     </a>
 
-    <!-- Popup box -->
+    <!-- About Popup box -->
     <div id="about" class="popup">
         <h2>About Daily Dough Bakeshop</h2>
         <p>
@@ -69,4 +63,5 @@
         <a href="#none" class="close">Close</a>
     </div>
 </body>
+
 </html>
