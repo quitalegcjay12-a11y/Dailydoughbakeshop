@@ -1,261 +1,670 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu - Daily Dough Bakeshop</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="nav-container">
-            <div class="logo-container">
-                <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
-                <h1>Daily Dough Bakeshop</h1>
-            </div>
-            <div class="navigation">
-                <ul>
-                    <li><a href="menu.html" class="active">Menu</a></li>
-                    <li><a href="location.html">Location</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="delivery.html">Delivery</a></li>
-                    <li><a href="login.html" id="login">Log in</a></li>
-                    <li><a href="cart.html" class="cart-icon" title="Shopping Cart">
-                        <img src="logo/cart-svgrepo-com.svg" alt="Cart">
-                    </a></li>
-                </ul>
-            </div>
+      <div class="nav-container">
+        <div class="logo-container">
+          <a href="index.html"
+            ><img class="logo" src="logo/logo.png" alt="Logo"
+          /></a>
+          <h1>Daily Dough Bakeshop</h1>
         </div>
+        <div class="navigation">
+          <ul>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="login.html" id="login">Log in</a></li>
+            <li>
+              <a href="cart.html" class="cart-icon" title="Shopping Cart">
+                <img src="logo/cart-svgrepo-com.svg" alt="Cart" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="page-content" id="menu">
-        <div class="page-header">
-            <h1>Our Menu</h1>
-            <p>Where every bites feels like home!</p>
-        </div>
+      <div class="page-header">
+        <h1>Our Menu</h1>
+        <p>Where every bites feels like home!</p>
+      </div>
 
-        <div class="menu-section">
-            <div class="menu-grid">
-                <a href="#pandesal" class="menu-card">
-                    <div class="card-image">
-                        <img src="Menu/pandesal.jpg" alt="Pan de Sal">
-                    </div>
-                    <div class="card-info">
-                        <h3>Pan de Sal</h3>
-                        <span class="price">15.00</span>
-                        <span class="tag">Best Seller</span>
-                    </div>
-                </a>
-                <a href="#ensaymada" class="menu-card">
-                    <div class="card-image">
-                        <img src="Menu/images.jpg" alt="Ensaymada">
-                    </div>
-                    <div class="card-info">
-                        <h3>Ensaymada</h3>
-                        <span class="price">25.00</span>
-                        <span class="tag">Popular</span>
-                    </div>
-                </a>
-                <a href="#spanishbread" class="menu-card">
-                    <div class="card-image">
-                        <img src="Menu/images (1).jpg" alt="Spanish Bread">
-                    </div>
-                    <div class="card-info">
-                        <h3>Spanish Bread</h3>
-                        <span class="price">18.00</span>
-                    </div>
-                </a>
-                <a href="#cheesebread" class="menu-card">
-                    <div class="card-image">
-                        <img src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg" alt="Cheese Bread">
-                    </div>
-                    <div class="card-info">
-                        <h3>Cheese Bread</h3>
-                        <span class="price">20.00</span>
-                    </div>
-                </a>
-                <a href="#pandecoco" class="menu-card">
-                    <div class="card-image">
-                        <img src="Menu/slices-of-pan-de-coco-filipino-bread-roll.jpg" alt="Pan de Coco">
-                    </div>
-                    <div class="card-info">
-                        <h3>Pan de Coco</h3>
-                        <span class="price">22.00</span>
-                    </div>
-                </a>
-                <a href="#putok" class="menu-card">
-                    <div class="card-image">
-                        <img src="Menu/hq720.jpg" alt="Putok">
-                    </div>
-                    <div class="card-info">
-                        <h3>Putok</h3>
-                        <span class="price">12.00</span>
-                    </div>
-                </a>
-            </div>
+      <div class="menu-section">
+        <div class="menu-filter">
+          <input
+            type="radio"
+            name="filter"
+            id="filter-all"
+            class="filter-radio"
+            checked
+          />
+          <label for="filter-all" class="filter-btn active">All</label>
+          <input
+            type="radio"
+            name="filter"
+            id="filter-classic"
+            class="filter-radio"
+          />
+          <label for="filter-classic" class="filter-btn">Classic</label>
+          <input
+            type="radio"
+            name="filter"
+            id="filter-premium"
+            class="filter-radio"
+          />
+          <label for="filter-premium" class="filter-btn">Premium</label>
         </div>
+        <div class="menu-grid">
+          <a href="#pandesal" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/pandesal.jpg" alt="Pan de Sal" />
+            </div>
+            <div class="card-info">
+              <h3>Pan de Sal</h3>
+              <span class="price">15.00</span>
+              <span class="tag">Best Seller</span>
+            </div>
+          </a>
+          <a href="#ensaymada" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/images.jpg" alt="Ensaymada" />
+            </div>
+            <div class="card-info">
+              <h3>Ensaymada</h3>
+              <span class="price">25.00</span>
+              <span class="tag">Popular</span>
+            </div>
+          </a>
+          <a href="#spanishbread" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/images (1).jpg" alt="Spanish Bread" />
+            </div>
+            <div class="card-info">
+              <h3>Spanish Bread</h3>
+              <span class="price">18.00</span>
+            </div>
+          </a>
+          <a href="#cheesebread" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img
+                src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg"
+                alt="Cheese Bread"
+              />
+            </div>
+            <div class="card-info">
+              <h3>Cheese Bread</h3>
+              <span class="price">20.00</span>
+            </div>
+          </a>
+          <a href="#pandecoco" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img
+                src="Menu/slices-of-pan-de-coco-filipino-bread-roll.jpg"
+                alt="Pan de Coco"
+              />
+            </div>
+            <div class="card-info">
+              <h3>Pan de Coco</h3>
+              <span class="price">22.00</span>
+            </div>
+          </a>
+          <a href="#putok" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/hq720.jpg" alt="Putok" />
+            </div>
+            <div class="card-info">
+              <h3>Putok</h3>
+              <span class="price">12.00</span>
+            </div>
+          </a>
+          <a href="#monay" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/pandesal.jpg" alt="Monay" />
+            </div>
+            <div class="card-info">
+              <h3>Monay</h3>
+              <span class="price">18.00</span>
+            </div>
+          </a>
+          <a href="#brioche" class="menu-card" data-category="premium">
+            <div class="card-image">
+              <img src="Menu/images.jpg" alt="Brioche" />
+            </div>
+            <div class="card-info">
+              <h3>Brioche</h3>
+              <span class="price">30.00</span>
+              <span class="tag">New</span>
+            </div>
+          </a>
+          <a href="#muffin" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/images (1).jpg" alt="Muffin" />
+            </div>
+            <div class="card-info">
+              <h3>Muffin</h3>
+              <span class="price">25.00</span>
+            </div>
+          </a>
+          <a href="#croissant" class="menu-card" data-category="premium">
+            <div class="card-image">
+              <img
+                src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg"
+                alt="Croissant"
+              />
+            </div>
+            <div class="card-info">
+              <h3>Croissant</h3>
+              <span class="price">35.00</span>
+            </div>
+          </a>
+          <a href="#cookie" class="menu-card" data-category="premium">
+            <div class="card-image">
+              <img
+                src="Menu/slices-of-pan-de-coco-filipino-bread-roll.jpg"
+                alt="Cookie"
+              />
+            </div>
+            <div class="card-info">
+              <h3>Cookie</h3>
+              <span class="price">15.00</span>
+            </div>
+          </a>
+          <a href="#cakeslice" class="menu-card" data-category="premium">
+            <div class="card-image">
+              <img src="Menu/hq720.jpg" alt="Cake Slice" />
+            </div>
+            <div class="card-info">
+              <h3>Cake Slice</h3>
+              <span class="price">45.00</span>
+            </div>
+          </a>
+          <a href="#brownie" class="menu-card" data-category="premium">
+            <div class="card-image">
+              <img src="Menu/pandesal.jpg" alt="Brownie" />
+            </div>
+            <div class="card-info">
+              <h3>Brownie</h3>
+              <span class="price">28.00</span>
+            </div>
+          </a>
+          <a href="#donut" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/images.jpg" alt="Donut" />
+            </div>
+            <div class="card-info">
+              <h3>Donut</h3>
+              <span class="price">20.00</span>
+            </div>
+          </a>
+          <a href="#bagel" class="menu-card" data-category="classic">
+            <div class="card-image">
+              <img src="Menu/images (1).jpg" alt="Bagel" />
+            </div>
+            <div class="card-info">
+              <h3>Bagel</h3>
+              <span class="price">22.00</span>
+            </div>
+          </a>
+          <a href="#danish" class="menu-card" data-category="premium">
+            <div class="card-image">
+              <img src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg" alt="Danish" />
+            </div>
+            <div class="card-info">
+              <h3>Danish</h3>
+              <span class="price">32.00</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- Floating About icon -->
     <a href="#about" id="aboutBtn">
-        <img src="logo/rolling.png" alt="About Icon">
+      <img src="logo/rolling.png" alt="About Icon" />
     </a>
 
     <!-- Product Modals -->
     <div id="pandesal" class="product-modal">
-        <div class="product-modal-content">
-            <a href="#menu" class="close-modal">&times;</a>
-            <div class="product-modal-image">
-                <img src="Menu/pandesal.jpg" alt="Pan de Sal">
-            </div>
-            <div class="product-modal-info">
-                <h2>Pan de Sal</h2>
-                <p class="modal-price">₱15.00</p>
-                <p class="modal-description">Classic Filipino bread roll, freshly baked daily.</p>
-                <div class="quantity-selector">
-                    <label>Quantity:</label>
-                    <div class="quantity-controls">
-                        <a href="#pandesal" class="qty-btn">-</a>
-                        <input type="text" value="1" readonly>
-                        <a href="#pandesal" class="qty-btn">+</a>
-                    </div>
-                </div>
-                <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
-            </div>
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/pandesal.jpg" alt="Pan de Sal" />
         </div>
+        <div class="product-modal-info">
+          <h2>Pan de Sal</h2>
+          <p class="modal-price">₱15.00</p>
+          <p class="modal-description">
+            Classic Filipino bread roll, freshly baked daily.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#pandesal" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#pandesal" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
     </div>
 
     <div id="ensaymada" class="product-modal">
-        <div class="product-modal-content">
-            <a href="#menu" class="close-modal">&times;</a>
-            <div class="product-modal-image">
-                <img src="Menu/images.jpg" alt="Ensaymada">
-            </div>
-            <div class="product-modal-info">
-                <h2>Ensaymada</h2>
-                <p class="modal-price">₱25.00</p>
-                <p class="modal-description">Sweet buttery pastry topped with cheese.</p>
-                <div class="quantity-selector">
-                    <label>Quantity:</label>
-                    <div class="quantity-controls">
-                        <a href="#ensaymada" class="qty-btn">-</a>
-                        <input type="text" value="1" readonly>
-                        <a href="#ensaymada" class="qty-btn">+</a>
-                    </div>
-                </div>
-                <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
-            </div>
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/images.jpg" alt="Ensaymada" />
         </div>
+        <div class="product-modal-info">
+          <h2>Ensaymada</h2>
+          <p class="modal-price">₱25.00</p>
+          <p class="modal-description">
+            Sweet buttery pastry topped with cheese.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#ensaymada" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#ensaymada" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
     </div>
 
     <div id="spanishbread" class="product-modal">
-        <div class="product-modal-content">
-            <a href="#menu" class="close-modal">&times;</a>
-            <div class="product-modal-image">
-                <img src="Menu/images (1).jpg" alt="Spanish Bread">
-            </div>
-            <div class="product-modal-info">
-                <h2>Spanish Bread</h2>
-                <p class="modal-price">₱18.00</p>
-                <p class="modal-description">Bread with sweet filling, a Filipino favorite.</p>
-                <div class="quantity-selector">
-                    <label>Quantity:</label>
-                    <div class="quantity-controls">
-                        <a href="#spanishbread" class="qty-btn">-</a>
-                        <input type="text" value="1" readonly>
-                        <a href="#spanishbread" class="qty-btn">+</a>
-                    </div>
-                </div>
-                <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
-            </div>
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/images (1).jpg" alt="Spanish Bread" />
         </div>
+        <div class="product-modal-info">
+          <h2>Spanish Bread</h2>
+          <p class="modal-price">₱18.00</p>
+          <p class="modal-description">
+            Bread with sweet filling, a Filipino favorite.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#spanishbread" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#spanishbread" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
     </div>
 
     <div id="cheesebread" class="product-modal">
-        <div class="product-modal-content">
-            <a href="#menu" class="close-modal">&times;</a>
-            <div class="product-modal-image">
-                <img src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg" alt="Cheese Bread">
-            </div>
-            <div class="product-modal-info">
-                <h2>Cheese Bread</h2>
-                <p class="modal-price">₱20.00</p>
-                <p class="modal-description">Bread loaded with creamy cheddar cheese.</p>
-                <div class="quantity-selector">
-                    <label>Quantity:</label>
-                    <div class="quantity-controls">
-                        <a href="#cheesebread" class="qty-btn">-</a>
-                        <input type="text" value="1" readonly>
-                        <a href="#cheesebread" class="qty-btn">+</a>
-                    </div>
-                </div>
-                <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
-            </div>
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img
+            src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg"
+            alt="Cheese Bread"
+          />
         </div>
+        <div class="product-modal-info">
+          <h2>Cheese Bread</h2>
+          <p class="modal-price">₱20.00</p>
+          <p class="modal-description">
+            Bread loaded with creamy cheddar cheese.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#cheesebread" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#cheesebread" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
     </div>
 
     <div id="pandecoco" class="product-modal">
-        <div class="product-modal-content">
-            <a href="#menu" class="close-modal">&times;</a>
-            <div class="product-modal-image">
-                <img src="Menu/slices-of-pan-de-coco-filipino-bread-roll.jpg" alt="Pan de Coco">
-            </div>
-            <div class="product-modal-info">
-                <h2>Pan de Coco</h2>
-                <p class="modal-price">₱22.00</p>
-                <p class="modal-description">Coconut-filled bread, soft and flavorful.</p>
-                <div class="quantity-selector">
-                    <label>Quantity:</label>
-                    <div class="quantity-controls">
-                        <a href="#pandecoco" class="qty-btn">-</a>
-                        <input type="text" value="1" readonly>
-                        <a href="#pandecoco" class="qty-btn">+</a>
-                    </div>
-                </div>
-                <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
-            </div>
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img
+            src="Menu/slices-of-pan-de-coco-filipino-bread-roll.jpg"
+            alt="Pan de Coco"
+          />
         </div>
+        <div class="product-modal-info">
+          <h2>Pan de Coco</h2>
+          <p class="modal-price">₱22.00</p>
+          <p class="modal-description">
+            Coconut-filled bread, soft and flavorful.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#pandecoco" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#pandecoco" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
     </div>
 
     <div id="putok" class="product-modal">
-        <div class="product-modal-content">
-            <a href="#menu" class="close-modal">&times;</a>
-            <div class="product-modal-image">
-                <img src="Menu/hq720.jpg" alt="Putok">
-            </div>
-            <div class="product-modal-info">
-                <h2>Putok</h2>
-                <p class="modal-price">₱12.00</p>
-                <p class="modal-description">Crunchy Filipino bread, perfect for snacking.</p>
-                <div class="quantity-selector">
-                    <label>Quantity:</label>
-                    <div class="quantity-controls">
-                        <a href="#putok" class="qty-btn">-</a>
-                        <input type="text" value="1" readonly>
-                        <a href="#putok" class="qty-btn">+</a>
-                    </div>
-                </div>
-                <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
-            </div>
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/hq720.jpg" alt="Putok" />
         </div>
+        <div class="product-modal-info">
+          <h2>Putok</h2>
+          <p class="modal-price">₱12.00</p>
+          <p class="modal-description">
+            Crunchy Filipino bread, perfect for snacking.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#putok" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#putok" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="monay" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/pandesal.jpg" alt="Monay" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Monay</h2>
+          <p class="modal-price">₱18.00</p>
+          <p class="modal-description">Soft and fluffy Filipino bread loaf.</p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#monay" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#monay" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="brioche" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/images.jpg" alt="Brioche" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Brioche</h2>
+          <p class="modal-price">₱30.00</p>
+          <p class="modal-description">Buttery and rich French pastry bread.</p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#brioche" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#brioche" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="muffin" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/images (1).jpg" alt="Muffin" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Muffin</h2>
+          <p class="modal-price">₱25.00</p>
+          <p class="modal-description">Moist muffins perfect for breakfast.</p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#muffin" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#muffin" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="croissant" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg" alt="Croissant" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Croissant</h2>
+          <p class="modal-price">₱35.00</p>
+          <p class="modal-description">Flaky and buttery French croissant.</p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#croissant" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#croissant" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cookie" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img
+            src="Menu/slices-of-pan-de-coco-filipino-bread-roll.jpg"
+            alt="Cookie"
+          />
+        </div>
+        <div class="product-modal-info">
+          <h2>Cookie</h2>
+          <p class="modal-price">₱15.00</p>
+          <p class="modal-description">
+            Freshly baked cookies with chocolate chips.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#cookie" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#cookie" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="cakeslice" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/hq720.jpg" alt="Cake Slice" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Cake Slice</h2>
+          <p class="modal-price">₱45.00</p>
+          <p class="modal-description">Delicious cake slice, freshly cut.</p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#cakeslice" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#cakeslice" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="brownie" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/pandesal.jpg" alt="Brownie" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Brownie</h2>
+          <p class="modal-price">₱28.00</p>
+          <p class="modal-description">Rich and fudgy chocolate brownie.</p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#brownie" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#brownie" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="donut" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/images.jpg" alt="Donut" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Donut</h2>
+          <p class="modal-price">₱20.00</p>
+          <p class="modal-description">
+            Soft fried dough with glaze or frosting.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#donut" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#donut" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="bagel" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/images (1).jpg" alt="Bagel" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Bagel</h2>
+          <p class="modal-price">₱22.00</p>
+          <p class="modal-description">Chewy bagel perfect for sandwiches.</p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#bagel" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#bagel" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="danish" class="product-modal">
+      <div class="product-modal-content">
+        <a href="#menu" class="close-modal">&times;</a>
+        <div class="product-modal-image">
+          <img src="Menu/Cheddar-Cheese-Quick-Bread-14.jpg" alt="Danish" />
+        </div>
+        <div class="product-modal-info">
+          <h2>Danish</h2>
+          <p class="modal-price">₱32.00</p>
+          <p class="modal-description">
+            Flaky pastry with fruit or cream filling.
+          </p>
+          <div class="quantity-selector">
+            <label>Quantity:</label>
+            <div class="quantity-controls">
+              <a href="#danish" class="qty-btn">-</a>
+              <input type="text" value="1" readonly />
+              <a href="#danish" class="qty-btn">+</a>
+            </div>
+          </div>
+          <a href="#menu" class="add-to-cart-btn">Add to Cart</a>
+        </div>
+      </div>
     </div>
 
     <!-- Floating About icon -->
     <a href="#about" id="aboutBtn">
-        <img src="logo/rolling.png" alt="About Icon">
+      <img src="logo/rolling.png" alt="About Icon" />
     </a>
 
     <!-- About Popup box -->
     <div id="about" class="popup">
-        <h2>About Daily Dough Bakeshop</h2>
-        <p>
-            We bake fresh bread, pastries, and cakes daily with love and care.
-            Our mission is to bring warmth and joy to every home through oven-fresh goodness.
-        </p>
-        <a href="#none" class="close">Close</a>
+      <h2>About Daily Dough Bakeshop</h2>
+      <p>
+        We bake fresh bread, pastries, and cakes daily with love and care. Our
+        mission is to bring warmth and joy to every home through oven-fresh
+        goodness.
+      </p>
+      <a href="#none" class="close">Close</a>
     </div>
-</body>
 
+    <script>
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const menuCards = document.querySelectorAll(".menu-card");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.dataset.filter;
+
+          menuCards.forEach((card) => {
+            if (filter === "all" || card.dataset.category === filter) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
