@@ -1,47 +1,79 @@
 <!DOCTYPE html>
+<!-- ============================================
+     DELIVERY PAGE - Delivery Information
+     Explains delivery areas, hours, fees, and ordering process
+     Shows which areas are served and how to order
+-->
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab -->
     <title>Delivery - Daily Dough Bakeshop</title>
+    <!-- Links to shared stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- ============================================
+         NAVIGATION BAR
+         Contains logo and links to all pages
+         Highlights "Delivery" as the active page
+    -->
     <nav>
         <div class="nav-container">
+            <!-- Logo and business name - links to homepage -->
             <div class="logo-container">
                 <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
                 <h1>Daily Dough Bakeshop</h1>
             </div>
+            <!-- Navigation links -->
             <div class="navigation">
                 <ul>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="location.html">Location</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="delivery.html" class="active">Delivery</a></li>
+                    <!-- Login button (white pill-shaped button) -->
                     <li><a href="login.html" id="login">Log in</a></li>
+                    <!-- Cart icon link -->
                     <li><a href="cart.html" class="cart-icon" title="Shopping Cart"><img src="logo/cart-svgrepo-com.svg" alt="Cart"></a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- ============================================
+         PAGE CONTENT
+         Main content area below the navigation bar
+    -->
     <div class="page-content">
+        <!-- Page Header - Title and subtitle -->
         <div class="page-header">
             <h1>Delivery Information</h1>
             <p>Fresh bread delivered to your doorstep!</p>
         </div>
 
+        <!-- ============================================
+             DELIVERY SECTION
+             Uses CSS Grid layout to display info cards
+             Cards include: areas, hours, fees, steps, contact
+        -->
         <div class="delivery-section">
-            <!-- Delivery Areas -->
+            <!-- ============================================
+                 DELIVERY AREAS CARD
+                 Lists the cities/areas served by delivery
+            -->
             <div class="delivery-card">
+                <!-- Location emoji as icon -->
                 <div class="delivery-icon">
                     <span>📍</span>
                 </div>
                 <h2>Delivery Areas</h2>
                 <p>We currently deliver within:</p>
+                <!-- Two-column list of delivery areas -->
                 <ul class="area-list">
                     <li>Manila</li>
                     <li>Quezon City</li>
@@ -54,55 +86,78 @@
                 </ul>
             </div>
 
-            <!-- Delivery Hours -->
+            <!-- ============================================
+                 DELIVERY HOURS CARD
+                 Shows when deliveries are available
+            -->
             <div class="delivery-card">
+                <!-- Clock emoji as icon -->
                 <div class="delivery-icon">
                     <span>🕐</span>
                 </div>
                 <h2>Delivery Hours</h2>
+                <!-- Hours information -->
                 <div class="hours-info">
                     <p><strong>Monday - Friday:</strong> 7:00 AM - 6:00 PM</p>
                     <p><strong>Saturday:</strong> 7:00 AM - 4:00 PM</p>
                     <p><strong>Sunday:</strong> 8:00 AM - 2:00 PM</p>
                 </div>
+                <!-- Note about same-day delivery -->
                 <p class="note">Same-day delivery for orders placed before 2:00 PM</p>
             </div>
 
-            <!-- Delivery Fee -->
+            <!-- ============================================
+                 DELIVERY FEE CARD
+                 Shows pricing for delivery
+            -->
             <div class="delivery-card">
+                <!-- Money emoji as icon -->
                 <div class="delivery-icon">
                     <span>💰</span>
                 </div>
                 <h2>Delivery Fee</h2>
                 <div class="fee-info">
+                    <!-- Free delivery for orders over ₱500 -->
                     <p><strong>Orders ₱500+</strong> - FREE Delivery</p>
+                    <!-- ₱50 fee for smaller orders -->
                     <p><strong>Orders below ₱500</strong> - ₱50.00 fee</p>
                 </div>
             </div>
 
-            <!-- How to Order -->
+            <!-- ============================================
+                 HOW TO ORDER CARD (Full Width)
+                 Step-by-step guide for ordering for delivery
+                 Contains numbered steps in a grid layout
+            -->
             <div class="delivery-card full-width">
+                <!-- Package emoji as icon -->
                 <div class="delivery-icon">
                     <span>📦</span>
                 </div>
                 <h2>How to Order for Delivery</h2>
+                <!-- Steps displayed in a responsive grid -->
                 <div class="steps">
+                    <!-- Step 1: Browse menu -->
                     <div class="step">
                         <span class="step-number">1</span>
                         <p>Browse our <a href="menu.html">Menu</a> and add items to your cart</p>
                     </div>
+                    <!-- Step 2: Login/Register -->
                     <div class="step">
                         <span class="step-number">2</span>
                         <p>Log in or register for an account</p>
                     </div>
+                    <!-- Step 3: Fill delivery address -->
                     <div class="step">
                         <span class="step-number">3</span>
                         <p>Fill in your delivery address at checkout</p>
                     </div>
+                    <!-- Step 4: Choose payment -->
                     <div class="step">
                         <span class="step-number">4</span>
                         <p>Choose your preferred payment method</p>
                     </div>
+                    <!-- Step 5: Wait for delivery -->
                     <div class="step">
                         <span class="step-number">5</span>
                         <p>Sit back and wait for your fresh bread!</p>
@@ -110,30 +165,46 @@
                 </div>
             </div>
 
-            <!-- Contact for Delivery Inquiries -->
+            <!-- ============================================
+                 CONTACT FOR DELIVERY INQUIRIES CARD (Full Width)
+                 Provides contact options for delivery questions
+            -->
             <div class="delivery-card contact-card">
                 <h2>Delivery Inquiries</h2>
                 <p>Have questions about delivery? We're here to help!</p>
+                <!-- Contact buttons -->
                 <div class="contact-methods">
+                    <!-- Click-to-call phone link -->
                     <a href="tel:+639123456789" class="contact-btn">Call Us</a>
+                    <!-- Link to contact page -->
                     <a href="contact.html" class="contact-btn">Send Message</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Floating About icon -->
+    <!-- ============================================
+         FLOATING ABOUT BUTTON
+         Fixed position button in bottom-right corner
+         Clicking shows the about popup
+         Uses CSS :target selector (no JavaScript)
+    -->
     <a href="#about" id="aboutBtn">
         <img src="logo/rolling.png" alt="About Icon">
     </a>
 
-    <!-- About Popup box -->
+    <!-- ============================================
+         ABOUT POPUP BOX
+         Hidden by default, shown when #about is targeted
+         Contains brief description of the bakery
+    -->
     <div id="about" class="popup">
         <h2>About Daily Dough Bakeshop</h2>
         <p>
             We bake fresh bread, pastries, and cakes daily with love and care.
             Our mission is to bring warmth and joy to every home through oven-fresh goodness.
         </p>
+        <!-- Close button - links to #none to hide popup -->
         <a href="#none" class="close">Close</a>
     </div>
 </body>

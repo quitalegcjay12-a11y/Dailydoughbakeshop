@@ -1,13 +1,24 @@
 <!doctype html>
+<!-- ============================================
+     MENU PAGE - Product Listing
+     Displays all bakery products in a card grid layout
+     Clicking a card opens a modal popup with details
+-->
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu - Daily Dough Bakeshop</title>
+    <!-- Links to shared stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <!-- ============================================
+         NAVIGATION BAR - Same as other pages
+         Contains logo and links to all pages
+    -->
     <nav>
       <div class="nav-container">
         <div class="logo-container">
@@ -33,38 +44,20 @@
       </div>
     </nav>
 
+    <!-- ============================================
+         MENU PAGE CONTENT
+         Contains page header and product grid
+    -->
     <div class="page-content" id="menu">
+      <!-- Page Title and Subtitle -->
       <div class="page-header">
         <h1>Our Menu</h1>
         <p>Where every bites feels like home!</p>
       </div>
 
-      <div class="menu-section">
-        <div class="menu-filter">
-          <input
-            type="radio"
-            name="filter"
-            id="filter-all"
-            class="filter-radio"
-            checked
-          />
-          <label for="filter-all" class="filter-btn active">All</label>
-          <input
-            type="radio"
-            name="filter"
-            id="filter-classic"
-            class="filter-radio"
-          />
-          <label for="filter-classic" class="filter-btn">Classic</label>
-          <input
-            type="radio"
-            name="filter"
-            id="filter-premium"
-            class="filter-radio"
-          />
-          <label for="filter-premium" class="filter-btn">Premium</label>
-        </div>
         <div class="menu-grid">
+          <!-- Each menu item card links to its modal via href="#productid" -->
+          <!-- CSS :target selector shows the corresponding modal when clicked -->
           <a href="#pandesal" class="menu-card" data-category="classic">
             <div class="card-image">
               <img src="Menu/pandesal.jpg" alt="Pan de Sal" />
@@ -233,7 +226,7 @@
       <img src="logo/rolling.png" alt="About Icon" />
     </a>
 
-    <!-- Product Modals -->
+    <!-- Product Modals pop up -->
     <div id="pandesal" class="product-modal">
       <div class="product-modal-content">
         <a href="#menu" class="close-modal">&times;</a>
@@ -645,26 +638,5 @@
       <a href="#none" class="close">Close</a>
     </div>
 
-    <script>
-      const filterBtns = document.querySelectorAll(".filter-btn");
-      const menuCards = document.querySelectorAll(".menu-card");
-
-      filterBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          filterBtns.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-
-          const filter = btn.dataset.filter;
-
-          menuCards.forEach((card) => {
-            if (filter === "all" || card.dataset.category === filter) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
-    </script>
   </body>
 </html>

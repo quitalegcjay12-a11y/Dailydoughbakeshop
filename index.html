@@ -2,27 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Dough Bakeshop</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Meta tags provide metadata about the webpage -->
+    <meta charset="UTF-8"> <!-- Character encoding - ensures special characters display correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive on mobile devices -->
+    <title>Daily Dough Bakeshop</title> <!-- Title shown in browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to the external CSS stylesheet -->
 </head>
 
 <body>
+    <!-- Landing Page Section -->
+    <!-- This div creates the full-screen hero/landing area with background image -->
     <div class="landing-page">
+        <!-- Navigation Bar - Fixed at top of page -->
         <nav>
             <div class="nav-container">
+                <!-- Logo Section - Contains bakery logo and business name -->
                 <div class="logo-container">
                     <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
+                    <!-- H1 is the main heading, uses serif font from CSS -->
                     <h1>Daily Dough Bakeshop</h1>
                 </div>
+
+                <!-- Navigation Links - Main menu to other pages -->
                 <div class="navigation">
                     <ul>
+                        <!-- Each li is a navigation link to different pages -->
                         <li><a href="menu.html">Menu</a></li>
                         <li><a href="location.html">Location</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="delivery.html">Delivery</a></li>
                         <li><a href="login.html" id="login">Log in</a></li>
+                        <!-- Cart icon link with shopping cart image -->
                         <li><a href="cart.html" class="cart-icon" title="Shopping Cart"><img src="logo/cart-svgrepo-com.svg" alt="Cart"></a></li>
                     </ul>
                 </div>
@@ -30,24 +40,27 @@
         </nav>
     </div>
 
-    <!-- Centered text block -->
+    <!-- Centered Hero Text - Main welcoming text on landing page -->
     <div class="center-text">
         <h1>Daily Dough Bakeshop</h1>
         <p>Freshly baked Filipino favorites every day!</p>
     </div>
 
-    <!-- Floating About icon -->
+    <!-- Floating About Button - Fixed position button (bottom-right) -->
+    <!-- Uses anchor link (#about) to trigger popup visibility via CSS -->
     <a href="#about" id="aboutBtn">
         <img src="logo/rolling.png" alt="About Icon">
     </a>
 
-    <!-- Popup box -->
+    <!-- About Popup Box - Hidden by default, shown when #about anchor is targeted -->
+    <!-- CSS uses #about:target selector to show this div when button is clicked -->
     <div id="about" class="popup">
         <h2>About Daily Dough Bakeshop</h2>
         <p>
             We bake fresh bread, pastries, and cakes daily with love and care.
             Our mission is to bring warmth and joy to every home through oven-fresh goodness.
         </p>
+        <!-- Close link uses #none to hide popup again -->
         <a href="#none" class="close">Close</a>
     </div>
 

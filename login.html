@@ -1,106 +1,192 @@
 <!DOCTYPE html>
+<!-- ============================================
+     LOGIN PAGE - User Authentication
+     Provides login and registration forms
+     Uses JavaScript for tab switching between forms
+     Note: This is a frontend-only implementation
+     (No actual authentication backend)
+-->
 <html lang="en">
+
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab -->
     <title>Login - Daily Dough Bakeshop</title>
+    <!-- Links to shared stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- ============================================
+         NAVIGATION BAR
+         Contains logo and links to all pages
+         Note: No cart icon on login page
+    -->
     <nav>
         <div class="nav-container">
+            <!-- Logo and business name - links to homepage -->
             <div class="logo-container">
                 <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
                 <h1>Daily Dough Bakeshop</h1>
             </div>
+            <!-- Navigation links (minimal - just main pages) -->
             <div class="navigation">
                 <ul>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="location.html">Location</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <!-- Login link marked as active page -->
                     <li><a href="login.html" class="active">Log in</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- ============================================
+         LOGIN CONTAINER
+         Centers the login card vertically on page
+    -->
     <div class="login-container">
+        <!-- ============================================
+             LOGIN CARD
+             White card containing login/register forms
+             Centered on page with shadow for depth
+        -->
         <div class="login-card">
+            <!-- Login Header with logo and title -->
             <div class="login-header">
                 <img class="login-logo" src="logo/logo.png" alt="Logo">
                 <h1>Daily Dough Bakeshop</h1>
             </div>
 
+            <!-- ============================================
+                 TAB BUTTONS
+                 Login/Register toggle buttons
+                 Clicking switches between the two forms
+                 Uses JavaScript onclick to switch tabs
+            -->
             <div class="tab-buttons">
+                <!-- Login tab button - marked active by default -->
                 <button class="tab-btn active" onclick="showTab('login')">Login</button>
+                <!-- Register tab button -->
                 <button class="tab-btn" onclick="showTab('register')">Register</button>
             </div>
 
-            <!-- Login Form -->
+            <!-- ============================================
+                 LOGIN FORM
+                 Form for existing users to log in
+                 Fields: email and password
+            -->
             <form id="login-form" class="auth-form">
+                <!-- Email input field -->
                 <div class="form-group">
                     <input type="email" placeholder="Email" required>
                 </div>
+                <!-- Password input field -->
                 <div class="form-group">
                     <input type="password" placeholder="Password" required>
                 </div>
+                <!-- Submit login button -->
                 <button type="submit" class="auth-btn">Login</button>
+                <!-- Link to switch to register form -->
                 <p class="auth-link">Don't have an account? <a href="#" onclick="showTab('register'); return false;">Register</a></p>
             </form>
 
-            <!-- Register Form -->
+            <!-- ============================================
+                 REGISTER FORM
+                 Form for new users to create account
+                 Fields: name, email, password, confirm password
+                 Hidden by default, shown when Register tab clicked
+            -->
             <form id="register-form" class="auth-form" style="display: none;">
+                <!-- Full name input -->
                 <div class="form-group">
                     <input type="text" placeholder="Full Name" required>
                 </div>
+                <!-- Email input -->
                 <div class="form-group">
                     <input type="email" placeholder="Email" required>
                 </div>
+                <!-- Password input -->
                 <div class="form-group">
                     <input type="password" placeholder="Password" required>
                 </div>
+                <!-- Confirm password input -->
                 <div class="form-group">
                     <input type="password" placeholder="Confirm Password" required>
                 </div>
+                <!-- Submit registration button -->
                 <button type="submit" class="auth-btn">Register</button>
+                <!-- Link to switch to login form -->
                 <p class="auth-link">Already have an account? <a href="#" onclick="showTab('login'); return false;">Login</a></p>
             </form>
         </div>
     </div>
 
-    <!-- Floating About icon -->
+    <!-- ============================================
+         FLOATING ABOUT BUTTON
+         Fixed position button in bottom-right corner
+         Clicking shows the about popup
+         Uses CSS :target selector (no JavaScript)
+    -->
     <a href="#about" id="aboutBtn">
         <img src="logo/rolling.png" alt="About Icon">
     </a>
 
-    <!-- Popup box -->
+    <!-- ============================================
+         ABOUT POPUP BOX
+         Hidden by default, shown when #about is targeted
+         Contains brief description of the bakery
+    -->
     <div id="about" class="popup">
         <h2>About Daily Dough Bakeshop</h2>
         <p>
             We bake fresh bread, pastries, and cakes daily with love and care.
             Our mission is to bring warmth and joy to every home through oven-fresh goodness.
         </p>
+        <!-- Close button - links to #none to hide popup -->
         <a href="#none" class="close">Close</a>
     </div>
 
+    <!-- ============================================
+         JAVASCRIPT - Tab Switching Functionality
+         This is the ONLY JavaScript on the website
+         Switches between login and register forms
+    -->
     <script>
+        /**
+         * showTab function - Switches between Login and Register forms
+         * @param {string} tab - Either 'login' or 'register'
+         * This function:
+         * 1. Hides/shows the appropriate form
+         * 2. Updates the active state on tab buttons
+         */
         function showTab(tab) {
+            // Get references to both forms and tab buttons
             const loginForm = document.getElementById('login-form');
             const registerForm = document.getElementById('register-form');
             const tabBtns = document.querySelectorAll('.tab-btn');
-            
+
+            // Check which tab to show
             if (tab === 'login') {
+                // Show login form, hide register form
                 loginForm.style.display = 'flex';
                 registerForm.style.display = 'none';
+                // Highlight login tab button, remove from register tab
                 tabBtns[0].classList.add('active');
                 tabBtns[1].classList.remove('active');
             } else {
+                // Show register form, hide login form
                 loginForm.style.display = 'none';
                 registerForm.style.display = 'flex';
+                // Highlight register tab button, remove from login tab
                 tabBtns[0].classList.remove('active');
                 tabBtns[1].classList.add('active');
             }
         }
     </script>
 </body>
+
 </html>

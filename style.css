@@ -1,5 +1,21 @@
+/* ============================================
+   GOOGLE FONTS IMPORT
+   ============================================
+   Imports custom fonts from Google Fonts:
+   - Playfair Display: Elegant serif font for headings
+   - Work Sans: Clean sans-serif font for body text
+*/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* ============================================
+   CSS RESET & BASE STYLES
+   ============================================
+   * selector applies to ALL elements - this is a CSS reset
+   - margin: 0 - removes default browser margins
+   - padding: 0 - removes default browser padding
+   - box-sizing: border-box - makes width/height include padding and borders
+   - font-family - sets default font for entire page
+*/
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +23,26 @@
   font-family: "Work Sans", sans-serif;
 }
 
+/* ============================================
+   BODY STYLES
+   ============================================
+   - background-color: Warm cream color (#fff8f0)
+   - color: Dark brown text color (#3e2723)
+   These create the bakery's warm, cozy visual identity
+*/
 body {
   background-color: #fff8f0;
   color: #3e2723;
 }
 
+/* ============================================
+   NAVIGATION BAR STYLES
+   ============================================
+   - position: fixed - Nav stays visible at top even when scrolling
+   - z-index: 1000 - Ensures nav appears above other content
+   - background: Warm bread brown color (#c4813d)
+   - box-shadow - Adds depth/3D effect below nav
+*/
 nav {
   position: fixed;
   width: 100%;
@@ -21,6 +52,7 @@ nav {
   padding: 8px 0;
 }
 
+/* Nav Container - Centers content and spaces out logo and links */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -31,12 +63,14 @@ nav {
   height: 60px;
 }
 
+/* Logo Container - Flexbox to align logo image and text horizontally */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 12px; /* Space between logo image and business name */
 }
 
+/* Business name styling in header */
 .logo-container h1 {
   color: #fdf6e3;
   font-family: "Playfair Display", serif;
@@ -44,67 +78,77 @@ nav {
   font-weight: 700;
 }
 
+/* Removes default underline from logo link */
 .logo-container a {
   text-decoration: none;
 }
 
+/* Logo Image Styles */
 .logo {
   width: 55px;
   height: 55px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.2s ease;
+  border-radius: 50%; /* Makes logo circular */
+  object-fit: cover; /* Ensures image fills circle without distortion */
+  transition: transform 0.2s ease; /* Smooth zoom animation on hover */
 }
 
+/* Logo Zoom Effect on Hover */
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slightly larger on hover (105% size) */
 }
 
+/* Navigation Links Container - Horizontal list of links */
 .navigation ul {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 35px; /* Space between each navigation link */
   margin: 0;
   padding: 0;
 }
 
+/* Remove bullet points from list items */
 .navigation ul li {
   list-style-type: none;
 }
 
+/* Navigation Link Styles */
 .navigation ul li a {
   text-decoration: none;
   color: #fdf6e3;
   font-size: 16px;
   font-weight: 600;
   padding: 8px 15px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  border-radius: 20px; /* Rounded pill-shaped buttons */
+  transition: all 0.3s ease; /* Smooth color transition on hover */
 }
 
+/* Hover and Active (current page) States for Nav Links */
 .navigation ul li a:hover,
 .navigation ul li a.active {
-  color: #3e2723;
-  background: rgba(255, 255, 255, 0.2);
+  color: #3e2723; /* Dark brown text on hover */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
 }
 
+/* Login Button Styling - Special white button appearance */
 #login {
   border: none;
   padding: 10px 25px;
   border-radius: 25px;
-  color: #c4813d;
+  color: #c4813d; /* Brown text on white button */
   background: #fff;
   font-weight: 600;
   font-size: 16px;
-  cursor: pointer;
+  cursor: pointer; /* Pointer cursor indicates clickable */
   transition: all 0.3s ease;
 }
 
+/* Login Button Hover - Inverts colors on hover */
 #login:hover {
-  background: #3e2723;
-  color: #fff;
+  background: #3e2723; /* Dark background */
+  color: #fff; /* White text */
 }
 
+/* Cart Icon Styling - Flexbox centers the cart image */
 .cart-icon {
   display: flex;
   align-items: center;
@@ -114,25 +158,33 @@ nav {
   height: 44px;
 }
 
+/* Cart Icon Image Size */
 .cart-icon img {
   width: 22px;
   height: 22px;
   vertical-align: middle;
 }
 
+/* Cart Icon Hover Effect */
 .cart-icon:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Landing Page */
+/* ============================================
+   LANDING PAGE STYLES
+   ============================================
+   The landing page has a full-screen background image
+   that creates the visual hero section
+*/
 .landing-page {
-  background-image: url(logo/landingpage.png);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  position: relative;
+  background-image: url(logo/landingpage.png); /* Hero background image */
+  background-size: cover; /* Image covers entire area */
+  background-position: center; /* Image centered */
+  height: 100vh; /* 100% of viewport height - full screen */
+  position: relative; /* Relative positioning for child elements */
 }
 
+/* Centered Text Block - Positioned absolutely over the background */
 .center-text {
   position: absolute;
   top: 0;
@@ -142,86 +194,112 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Stack h1 and p vertically */
   text-align: center;
-  z-index: 1;
+  z-index: 1; /* Above background, below nav */
 }
 
+/* Main Heading on Landing Page */
 .center-text h1 {
   font-size: 60px;
   margin-bottom: 20px;
   color: #3e2723;
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* White shadow for readability */
 }
 
+/* Subtitle Text on Landing Page */
 .center-text p {
   font-size: 28px;
   margin-bottom: 30px;
-  color: #5d4037;
+  color: #5d4037; /* Medium brown color */
 }
 
+/* ============================================
+   FLOATING ABOUT BUTTON
+   ============================================
+   Fixed position button in bottom-right corner
+   - position: fixed - Stays in place while scrolling
+   - z-index: 2000 - Above most content
+*/
 #aboutBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #fff;
   border: 2px solid #c4813d;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular button */
   padding: 10px;
   z-index: 2000;
 }
 
+/* About Button Icon Size */
 #aboutBtn img {
   width: 60px;
   height: 50px;
 }
 
+/* About Button Hover - Changes background color */
 #aboutBtn:hover {
   background: #c4813d;
 }
 
+/* ============================================
+   ABOUT POPUP BOX
+   ============================================
+   Hidden by default, displayed when #about anchor is targeted
+   This uses CSS :target selector (no JavaScript needed!)
+*/
 .popup {
-  display: none;
+  display: none; /* Hidden initially */
   position: fixed;
-  bottom: 80px;
+  bottom: 80px; /* Positioned above the button */
   right: 20px;
   width: 280px;
   background: #fff;
   border: 2px solid #c4813d;
   border-radius: 10px;
   padding: 15px;
-  z-index: 3000;
+  z-index: 3000; /* Above the button */
 }
 
+/* CSS Trick: When #about is targeted (clicked), show popup */
 #about:target {
   display: block;
 }
 
+/* Close Button Styling */
 .close {
   display: inline-block;
   margin-top: 10px;
   background: #c4813d;
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline from link */
   padding: 8px 12px;
   border-radius: 5px;
 }
 
+/* ============================================
+   PAGE CONTENT & HEADER STYLES
+   ============================================
+   Shared styles for interior pages (not landing)
+*/
 .page-content {
-  padding-top: 100px;
-  min-height: 100vh;
+  padding-top: 100px; /* Space below fixed nav */
+  min-height: 100vh; /* Minimum full viewport height */
   background-color: #fff8f0;
   color: #3e2723;
   padding-bottom: 60px;
 }
 
+/* Page Header - Title and subtitle for interior pages */
 .page-header {
   text-align: center;
   padding: 60px 20px 40px;
 }
 
+/* Page Title (H1) */
 .page-header h1 {
   font-family: "Playfair Display", serif;
   font-size: 48px;
@@ -229,6 +307,7 @@ nav {
   margin-bottom: 10px;
 }
 
+/* Page Subtitle (P) */
 .page-header p {
   font-size: 18px;
   color: #5d4037;
@@ -284,58 +363,78 @@ nav {
   padding: 20px;
 }
 
+/* ============================================
+   MENU GRID STYLES
+   ============================================
+   CSS Grid layout for the product cards
+   - repeat(auto-fit, minmax(280px, 1fr)) creates responsive columns
+   - Columns automatically wrap and resize based on screen width
+*/
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 25px; /* Space between grid items */
 }
 
+/* ============================================
+   MENU CARD STYLES (Product Cards)
+   ============================================
+   Each product is displayed as a clickable card
+*/
 .menu-card {
   background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15);
-  text-decoration: none;
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Hides image overflow beyond rounded corners */
+  box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15); /* Subtle shadow */
+  text-decoration: none; /* Remove underline from anchor */
   display: block;
   cursor: pointer;
+  /* Smooth hover animation - lift up and stronger shadow */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Card Hover Effect - Lifts up and shadow deepens */
 .menu-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Move up 5px */
   box-shadow: 0 8px 25px rgba(62, 39, 35, 0.25);
 }
 
+/* Card Image Container - Fixed height container */
 .menu-card .card-image {
   width: 100%;
   height: 200px;
-  background: #f5e6d3;
+  background: #f5e6d3; /* Light beige placeholder */
 }
 
+/* Card Image - Covers entire container */
 .menu-card .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Image fills space without distortion */
 }
 
+/* Card Info Section - Text content below image */
 .menu-card .card-info {
   padding: 20px;
 }
 
+/* Product Name */
 .menu-card .card-info h3 {
   font-size: 18px;
   color: #3e2723;
   margin-bottom: 8px;
 }
 
+/* Product Price */
 .menu-card .card-info .price {
   font-size: 20px;
   font-weight: 700;
-  color: #c4813d;
+  color: #c4813d; /* Brown accent color */
 }
 
+/* Product Tag (e.g., "Best Seller", "New") */
 .menu-card .card-info .tag {
-  display: inline-block;
+  display: inline-block; /* Allows margin */
   background: #c4813d;
   color: #fff;
   font-size: 11px;
@@ -344,22 +443,30 @@ nav {
   margin-left: 10px;
 }
 
+/* ============================================
+   CONTACT PAGE STYLES
+   ============================================
+   Two-column layout: form on left, info on right
+   Uses flexbox for responsive side-by-side layout
+*/
 .contact-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  display: flex;
-  gap: 50px;
+  display: flex; /* Side-by-side layout */
+  gap: 50px; /* Space between form and info columns */
 }
 
+/* Contact Form Container - Left column */
 .contact-form {
-  flex: 1;
+  flex: 1; /* Takes up equal space as contact-info */
   background: #fff;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15);
+  box-shadow: 0 4px 15px rgba(62, 39, 35, 0.15); /* Card shadow */
 }
 
+/* Contact Form Heading */
 .contact-form h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
@@ -367,27 +474,31 @@ nav {
   margin-bottom: 20px;
 }
 
+/* Form Layout - Vertical stack of inputs using flexbox */
 .contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 15px; /* Space between each form field */
 }
 
+/* Input and Textarea Shared Styles */
 .contact-form input,
 .contact-form textarea {
   padding: 15px;
-  border: 1px solid #e0d0c0;
+  border: 1px solid #e0d0c0; /* Light brown border */
   border-radius: 8px;
-  background: #fff8f0;
+  background: #fff8f0; /* Cream background */
   color: #3e2723;
   font-size: 16px;
 }
 
+/* Textarea Specific - Allows vertical resizing only */
 .contact-form textarea {
   min-height: 120px;
   resize: vertical;
 }
 
+/* Submit Button - Full width brown button */
 .contact-form button {
   padding: 15px;
   background: #c4813d;
@@ -399,14 +510,17 @@ nav {
   cursor: pointer;
 }
 
+/* Submit Button Hover - Darker brown on hover */
 .contact-form button:hover {
   background: #a66b2e;
 }
 
+/* Contact Info Section - Right column */
 .contact-info {
-  flex: 1;
+  flex: 1; /* Takes up equal space as contact-form */
 }
 
+/* Contact Info Heading */
 .contact-info h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
@@ -414,9 +528,10 @@ nav {
   margin-bottom: 20px;
 }
 
+/* Contact Info Paragraphs */
 .contact-info p {
   color: #5d4037;
-  line-height: 1.8;
+  line-height: 1.8; /* Readable line spacing */
   margin-bottom: 15px;
 }
 
@@ -468,7 +583,14 @@ nav {
   }
 }
 
+/* ============================================
+   RESPONSIVE STYLES - MOBILE (480px and below)
+   ============================================
+   Adjusts layout for phone-sized screens
+   Hides logo text, further reduces font sizes
+*/
 @media (max-width: 480px) {
+  /* Hide business name on very small screens */
   .logo-container h1 {
     display: none;
   }
@@ -508,20 +630,23 @@ nav {
   padding-top: 60px;
 }
 
+/* Login Card - Centered white card containing the form */
 .login-card {
   background: #fff;
   border-radius: 20px;
   padding: 40px;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 10px 40px rgba(62, 39, 35, 0.15);
+  max-width: 400px; /* Limits width on large screens */
+  box-shadow: 0 10px 40px rgba(62, 39, 35, 0.15); /* Deep shadow for depth */
   text-align: center;
 }
 
+/* Login Header - Logo and title area */
 .login-header {
   margin-bottom: 30px;
 }
 
+/* Login Page Logo - Larger circular logo */
 .login-logo {
   width: 100px;
   height: 100px;
@@ -530,24 +655,27 @@ nav {
   margin-bottom: 15px;
 }
 
+/* Login Page Title */
 .login-header h1 {
   font-family: "Playfair Display", serif;
   font-size: 24px;
   color: #3e2723;
 }
 
+/* Tab Buttons Container - Login/Register toggle buttons */
 .tab-buttons {
   display: flex;
   gap: 10px;
   margin-bottom: 25px;
 }
 
+/* Tab Button - Outlined button style */
 .tab-btn {
-  flex: 1;
+  flex: 1; /* Equal width buttons */
   padding: 12px;
   border: 2px solid #c4813d;
-  background: transparent;
-  color: #c4813d;
+  background: transparent; /* Transparent initially */
+  color: #c4813d; /* Brown text */
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -555,17 +683,20 @@ nav {
   transition: all 0.3s ease;
 }
 
+/* Active Tab Button - Filled brown background */
 .tab-btn.active {
   background: #c4813d;
   color: #fff;
 }
 
+/* Auth Form - Vertical stack of input fields */
 .auth-form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* Form Input Fields */
 .form-group input {
   width: 100%;
   padding: 15px;
@@ -576,15 +707,18 @@ nav {
   color: #3e2723;
 }
 
+/* Input Placeholder Text Color */
 .form-group input::placeholder {
   color: #999;
 }
 
+/* Input Focus State - Brown border when clicked */
 .form-group input:focus {
   outline: none;
   border-color: #c4813d;
 }
 
+/* Submit/Login Button */
 .auth-btn {
   width: 100%;
   padding: 15px;
@@ -595,26 +729,29 @@ nav {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 10px;
 }
 
+/* Submit Button Hover Effect */
 .auth-btn:hover {
   background: #a66b2e;
 }
 
+/* Auth Link - "Already have account?" text */
 .auth-link {
   font-size: 14px;
   color: #5d4037;
   margin-top: 15px;
 }
 
+/* Auth Link Anchor - Brown colored link */
 .auth-link a {
   color: #c4813d;
   text-decoration: none;
   font-weight: 600;
 }
 
+/* Auth Link Hover - Underline on hover */
 .auth-link a:hover {
   text-decoration: underline;
 }
@@ -628,24 +765,34 @@ nav {
   padding-top: 80px;
 }
 
-/* Product Modal */
+/* ============================================
+   PRODUCT MODAL (POPUP) STYLES
+   ============================================
+   Modal appears when clicking a menu item
+   Uses CSS :target selector to show/hide (no JavaScript!)
+   Full-screen overlay with centered content card
+*/
+
+/* Modal Overlay - Dark semi-transparent background */
 .product-modal {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(62, 39, 35, 0.7);
-  z-index: 5000;
-  justify-content: center;
-  align-items: center;
+  background: rgba(62, 39, 35, 0.7); /* Dark overlay with 70% opacity */
+  z-index: 5000; /* Very high z-index to be on top */
+  justify-content: center; /* Centers modal horizontally */
+  align-items: center; /* Centers modal vertically */
 }
 
+/* Show modal when its anchor ID is targeted (e.g., #pandesal) */
 .product-modal:target {
   display: flex;
 }
 
+/* Modal Content Card - White card with product details */
 .product-modal-content {
   background: #fff;
   border-radius: 20px;
@@ -653,20 +800,22 @@ nav {
   max-width: 500px;
   overflow: hidden;
   position: relative;
-  animation: modalSlideIn 0.3s ease;
+  animation: modalSlideIn 0.3s ease; /* Slide-in animation */
 }
 
+/* Modal Animation - Fades in and scales up */
 @keyframes modalSlideIn {
   from {
-    opacity: 0;
-    transform: scale(0.9) translateY(-20px);
+    opacity: 0; /* Invisible */
+    transform: scale(0.9) translateY(-20px); /* Smaller and lower */
   }
   to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+    opacity: 1; /* Fully visible */
+    transform: scale(1) translateY(0); /* Normal size and position */
   }
 }
 
+/* Close Button (X) - Top right corner of modal */
 .close-modal {
   position: absolute;
   top: 15px;
@@ -674,38 +823,43 @@ nav {
   font-size: 28px;
   font-weight: bold;
   color: #fff;
-  background: rgba(62, 39, 35, 0.7);
+  background: rgba(62, 39, 35, 0.7); /* Semi-transparent dark circle */
   width: 35px;
   height: 35px;
   border-radius: 50%;
   text-align: center;
-  line-height: 35px;
+  line-height: 35px; /* Vertically centers the X */
   cursor: pointer;
-  z-index: 10;
+  z-index: 10; /* Above the image */
   transition: background 0.3s ease;
 }
 
+/* Close Button Hover - Brown background */
 .close-modal:hover {
   background: #c4813d;
 }
 
+/* Product Image in Modal */
 .product-modal-image {
   width: 100%;
   height: 250px;
-  background: #f5e6d3;
+  background: #f5e6d3; /* Beige placeholder */
 }
 
+/* Product Image - Covers container */
 .product-modal-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Product Info Section in Modal */
 .product-modal-info {
   padding: 25px;
   text-align: center;
 }
 
+/* Product Name in Modal */
 .product-modal-info h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
@@ -713,6 +867,7 @@ nav {
   margin-bottom: 10px;
 }
 
+/* Product Price in Modal */
 .modal-price {
   font-size: 24px;
   font-weight: 700;
@@ -720,11 +875,13 @@ nav {
   margin-bottom: 10px;
 }
 
+/* Product Description in Modal */
 .modal-description {
   color: #5d4037;
   margin-bottom: 20px;
 }
 
+/* Quantity Selector - Centered row with label and controls */
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -733,20 +890,23 @@ nav {
   margin-bottom: 20px;
 }
 
+/* Quantity Label */
 .quantity-selector label {
   font-weight: 600;
   color: #3e2723;
 }
 
+/* Quantity Controls - Button group for +/- */
 .quantity-controls {
   display: flex;
   align-items: center;
   gap: 0;
   border: 2px solid #c4813d;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden; /* Buttons stay within rounded corners */
 }
 
+/* Quantity Buttons (+ and -) */
 .qty-btn {
   display: flex;
   align-items: center;
@@ -758,18 +918,20 @@ nav {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: none; /* Remove link underline */
   transition: background 0.2s ease;
 }
 
+/* Quantity Button Hover - Darker brown */
 .qty-btn:hover {
   background: #a66b2e;
 }
 
+/* Quantity Input - Shows current quantity number */
 .quantity-controls input {
   width: 60px;
   height: 40px;
-  border: none;
+  border: none; /* No border, blends with buttons */
   text-align: center;
   font-size: 16px;
   font-weight: 600;
@@ -777,10 +939,12 @@ nav {
   background: #fff;
 }
 
+/* Remove focus outline from quantity input */
 .quantity-controls input:focus {
   outline: none;
 }
 
+/* Add to Cart Button - Full width brown button */
 .add-to-cart-btn {
   width: 100%;
   padding: 15px;
@@ -791,9 +955,9 @@ nav {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
+/* Add to Cart Button Hover */
 .add-to-cart-btn:hover {
   background: #a66b2e;
 }

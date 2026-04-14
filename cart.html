@@ -1,20 +1,35 @@
 <!DOCTYPE html>
+<!-- ============================================
+     CART PAGE - Shopping Cart
+     Displays items added to cart (currently shows empty state)
+     Users can browse menu or proceed to checkout
+-->
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown in browser tab -->
     <title>Cart - Daily Dough Bakeshop</title>
+    <!-- Links to shared stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- ============================================
+         NAVIGATION BAR
+         Contains logo and links to all pages
+         Same consistent navigation across all pages
+    -->
     <nav>
         <div class="nav-container">
+            <!-- Logo and business name - links to homepage -->
             <div class="logo-container">
                 <a href="index.html"><img class="logo" src="logo/logo.png" alt="Logo"></a>
                 <h1>Daily Dough Bakeshop</h1>
             </div>
+            <!-- Navigation links -->
             <div class="navigation">
                 <ul>
                     <li><a href="menu.html">Menu</a></li>
@@ -22,6 +37,7 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="delivery.html">Delivery</a></li>
                     <li><a href="login.html" id="login">Log in</a></li>
+                    <!-- Cart icon - highlighted as active page -->
                     <li><a href="cart.html" class="cart-icon active">
                         <img src="logo/cart-svgrepo-com.svg" alt="Cart">
                     </a></li>
@@ -30,36 +46,64 @@
         </div>
     </nav>
 
+    <!-- ============================================
+         PAGE CONTENT
+         Main content area below the navigation bar
+    -->
     <div class="page-content">
+        <!-- Page Header - Title and subtitle -->
         <div class="page-header">
             <h1>Shopping Cart</h1>
             <p>Your selected items</p>
         </div>
 
+        <!-- ============================================
+             CART SECTION
+             Contains the cart contents or empty state
+             Currently shows empty state (no items in cart)
+        -->
         <div class="cart-section">
+            <!-- ============================================
+                 EMPTY CART MESSAGE
+                 Displayed when no items have been added
+                 Provides visual feedback and call-to-action
+            -->
             <div class="cart-empty">
+                <!-- Empty cart icon - uses cart SVG image -->
                 <div class="empty-icon">
                     <img src="logo/cart-svgrepo-com.svg" alt="Empty Cart">
                 </div>
+                <!-- Message when cart is empty -->
                 <h2>Your cart is empty</h2>
                 <p>Looks like you haven't added any items yet.</p>
+                <!-- Call-to-action button to browse menu -->
                 <a href="menu.html" class="back-to-menu-btn">Browse Menu</a>
             </div>
         </div>
     </div>
 
-    <!-- Floating About icon -->
+    <!-- ============================================
+         FLOATING ABOUT BUTTON
+         Fixed position button in bottom-right corner
+         Clicking shows the about popup
+         Uses CSS :target selector (no JavaScript)
+    -->
     <a href="#about" id="aboutBtn">
         <img src="logo/rolling.png" alt="About Icon">
     </a>
 
-    <!-- About Popup box -->
+    <!-- ============================================
+         ABOUT POPUP BOX
+         Hidden by default, shown when #about is targeted
+         Contains brief description of the bakery
+    -->
     <div id="about" class="popup">
         <h2>About Daily Dough Bakeshop</h2>
         <p>
             We bake fresh bread, pastries, and cakes daily with love and care.
             Our mission is to bring warmth and joy to every home through oven-fresh goodness.
         </p>
+        <!-- Close button - links to #none to hide popup -->
         <a href="#none" class="close">Close</a>
     </div>
 </body>
